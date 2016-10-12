@@ -1,0 +1,39 @@
+{
+  "name": "ts-seed-package",
+  "version": "0.0.1",
+  "description": "Seed package for typescript node packages.",
+  "main": "/lib/app.js",
+  "repository": {
+    "url": "https://github.com/mccombsd/ts-seed-package"
+  },
+  "scripts": {
+    "coverage": "istanbul cover node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=./tests/jasmine.json",
+    "declaration": "tsc -d ./lib/app.ts",
+    "git": "git push -u origin master",
+    "jasmine": "jasmine JASMINE_CONFIG_PATH=./tests/jasmine.json",
+    "lite": "lite-server -c ./lite.json",
+    "remap": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/remap-coverage.json",
+    "remap-report": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/html -t html",
+    "setup": "npm i && npm run tsc",
+    "test": "npm run jasmine",
+    "tsc": "tsc",
+    "tsc:w": "tsc --watch",
+    "watch": "npm run tsc:w"
+  },
+  "author": "Drew McCombs",
+  "license": "MIT",
+  "readme": "README.md",
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "typescript": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/jasmine": "^2.5.35",
+    "@types/node": "^6.0.45",
+    "concurrently": "^3.1.0",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.5.2",
+    "remap-istanbul": "^0.6.4"
+  }
+}
