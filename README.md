@@ -1,5 +1,5 @@
-# ts-seed-package
-This is a starter package to hold my default build for a package.
+# analyzer
+This will run against a list of files and return the cyclomatic complexity and fan out for each file and function.
 
 # Starting
 Run the following to get the package setup:
